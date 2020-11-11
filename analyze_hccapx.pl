@@ -174,7 +174,7 @@ while (read (HCCAPX_FILE, $struct_content, $HCCAPX_STRUCT_SIZE))
   print "HCCAPX {\n";
   print "  version:      " . unpack ("L*", $version) . "\n";
   print "  message_pair: " . unpack ("C*", $message_pair) . " (" . $message_pair_info . ")\n";
-  print "  essid:        " . $essid . "\n";
+  print "  essid:        " . unpack ("A*", $essid) . "\n";
   print "  keyver:       "   . unpack ("C*", $keyver) . " (" . $keyver_info . ")\n";
   print "  keymic:       "   . unpack ("H*", $keymic) . "\n";
   print "  MACS:\n";
